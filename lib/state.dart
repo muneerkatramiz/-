@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 import 'api.dart';
 
 class AppState extends ChangeNotifier {
@@ -112,6 +113,9 @@ class AppState extends ChangeNotifier {
     api.token = null;
     user = null;
     tab = 0;
+    try {
+      await WebViewCookieManager().clearCookies();
+    } catch (_) {}
     try {
       await _storage.delete(key: 'token');
       await _storage.delete(key: 'user');

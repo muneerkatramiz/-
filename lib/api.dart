@@ -121,6 +121,12 @@ class Api {
         return http.Response.fromStream(s);
       }, timeout: const Duration(seconds: 120));
 
+  /// URL of a page of the Shabekin website. When signed in, the URL carries a one-time login code.
+  Future<String> webLink(String page) async {
+    final r = await post('/auth/web-link', {'page': page});
+    return (r['url'] ?? '').toString();
+  }
+
   Future<Json> removeVehiclePhoto(int vehicleId, int photoId) => post('/provider/vehicles/$vehicleId/photos/$photoId/delete');
 
   Future<Json> providerRegister(Map<String, String> fields, Map<String, String> files) =>

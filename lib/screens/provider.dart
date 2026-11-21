@@ -611,7 +611,7 @@ class _ProviderRegisterScreenState extends State<ProviderRegisterScreen> {
     setState(() => _busy = true);
     try {
       await s.providerRegister(fields, files);
-      s.setTab(2);
+      s.setTab(3);
       nav.pop(true);
     } catch (e) {
       if (mounted) snack(context, errText(e));

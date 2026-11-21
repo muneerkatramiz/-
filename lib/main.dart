@@ -6,7 +6,7 @@ import 'l10n.dart';
 import 'screens/account.dart';
 import 'screens/provider.dart';
 import 'screens/requests.dart';
-import 'screens/services.dart';
+import 'screens/site.dart';
 import 'state.dart';
 import 'theme.dart';
 
@@ -98,7 +98,8 @@ class HomeShell extends StatelessWidget {
   Widget build(BuildContext context) {
     final s = context.watch<AppState>();
     final tabs = <_Tab>[
-      _Tab(Icons.local_shipping_outlined, 'tab_services', const ServicesScreen()),
+      _Tab(Icons.home_outlined, 'tab_home', const SiteView(page: 'shabek-home')),
+      _Tab(Icons.local_shipping_outlined, 'tab_services', const SiteView(page: 'services')),
       _Tab(Icons.receipt_long_outlined, 'tab_requests', const RequestsScreen()),
       if (s.isProvider) _Tab(Icons.work_outline, 'tab_provider', const ProviderScreen()),
       _Tab(Icons.person_outline, 'tab_account', const AccountScreen()),

@@ -4,6 +4,7 @@ import '../l10n.dart';
 import '../state.dart';
 import '../theme.dart';
 import '../widgets.dart';
+import 'site.dart';
 import 'auth.dart';
 import 'provider.dart';
 
@@ -86,6 +87,18 @@ class AccountScreen extends StatelessWidget {
                 const Icon(Icons.chevron_right),
               ]),
             ),
+        ],
+        if (u != null) ...[
+          const SizedBox(height: 12),
+          Panel(
+            padding: EdgeInsets.zero,
+            child: ListTile(
+              leading: const Icon(Icons.dashboard_customize_outlined, color: kGreen),
+              title: Text(context.tr('site_account'), style: const TextStyle(fontWeight: FontWeight.w700)),
+              trailing: const Icon(Icons.chevron_right),
+              onTap: () => Navigator.of(context).push(MaterialPageRoute<void>(builder: (_) => const Scaffold(body: SiteView(page: 'dashboard')))),
+            ),
+          ),
         ],
         const SizedBox(height: 12),
         Panel(

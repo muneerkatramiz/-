@@ -30,6 +30,9 @@ Test: browse services → register → send request → provider (approved) send
 - App Store Connect: screenshots (6.7" and 6.5"), privacy nutrition labels, privacy URL. Put the test customer + approved provider credentials in "App Review Information" — reviewers must be able to log in.
 - Account deletion is built in (Account → Delete account), as Apple requires.
 
+## Same as the website
+Home, Services (every service wizard), vehicle rental and the account pages are the real website pages shown inside the app (plugin 1.10.0+), signed in automatically. Anything you change on the site shows in the app with no new build. Requests/offers, provider tools, vehicle photos and settings stay native.
+
 ## Providers: individual or company
 Registration (web and app) starts with Individual / Company. Individuals send civil ID photo (required), licence (optional), profile photo (optional). Companies send commercial register copy (required) and logo (optional). Approved providers add up to 6 photos per vehicle when creating it and can add/remove photos later (max 8). Photos show in the app and on the website rental cards.
 

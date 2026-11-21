@@ -3,7 +3,11 @@ import 'package:provider/provider.dart';
 import 'state.dart';
 
 const Map<String, List<String>> _s = {
+  'tab_home': ['الرئيسية', 'Home'],
   'tab_services': ['الخدمات', 'Services'],
+  'site_account': ['حسابي على الموقع (الطلبات والتأجير)', 'My account on the website (orders & rentals)'],
+  'site_back': ['رجوع', 'Back'],
+  'site_reload': ['تحديث', 'Reload'],
   'tab_requests': ['طلباتي', 'My requests'],
   'tab_provider': ['مقدم الخدمة', 'Provider'],
   'tab_account': ['حسابي', 'Account'],

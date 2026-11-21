@@ -161,7 +161,7 @@ class _RequestFormScreenState extends State<RequestFormScreen> {
         'details': _details.text.trim(),
       });
       s.bump();
-      s.setTab(1);
+      s.setTab(2);
       nav.pop();
       msgr.showSnackBar(SnackBar(content: Text(okText)));
     } catch (e) {
